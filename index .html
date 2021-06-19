@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body{
+        background: #f37c67;
+        background-size:cover;
+        background-repeat:no-repeat;
+      }
+      .cal h1 {
+    font-family: arial;
+    font-weight: 800;
+    font-size: 3rem;
+    text-align: center;
+    text-shadow: 2px 3px 6px #1273d0;
+    align-items: center;
+    letter-spacing: 2px;
+}
+.main {
+    border: 1px solid black;
+    height: 300px;
+    width: 250px;
+    background-color: #9614f5;
+    position: relative;
+    border-radius: 5px;
+    margin: 112px auto;
+    box-shadow: 10px -14px 33px -20px black;
+}
+     input#first {
+    padding: 10px 7px 7px 10px;
+    margin-left: 28px;
+    margin-top: 45px;
+    outline: none;
+    border-radius: 3px;
+    background: #ddd;
+}
+input#second {
+    padding: 10px 7px 7px 10px;
+    margin-left: 28px;
+    margin-top: 25px;
+    outline: none;
+    border-radius: 3px;
+    background: #ddd;
+}
+.but {
+    margin-left: 43px;
+    margin-top: 20px;
+}
+button {
+    padding: 2px 12px;
+    text-align: center;
+    border: 2px solid red;
+    border-radius: 5px;
+    font-weight: 600;
+}
+button:hover{
+   background: cyan;
+   border:2px solid blue;
+    
+}
+h1#heading {
+    margin-left: 10px;
+}
+
+a {
+    margin-left: 44px;
+    position: absolute;
+    top: 250px;
+    letter-spacing: 1.1px;
+    text-decoration: none;
+    color: #f4f702;
+    font-weight: bold;
+}
+a:hover{
+   text-decoration: underline;
+}
+   </style>
+     
+</head>
+<body>
+   <header class="cal">
+      <h1>CALCULATOR</h1>
+   </header>
+   <section class="main">
+   <input type="text" placeholder="enter first number" id="first"><br/>
+   <input type="text" placeholder="enter second number" id="second"><br/>
+   <div class="but">
+   <button onclick="samia()">+</button>
+   <button onclick="samad()">-</button>
+   <button onclick="mihi()">x</button>
+   <button onclick="masum()">/</button>
+   </div>
+   <h1 id="heading"></h1>
+ 
+   <span><a href="#">Complex Calculator</a></span>
+   
+</section>
+
+  
+   <script>
+      function samia(){
+         var x=document.getElementById("first").value;
+         var x=parseInt(x);
+         var y=document.getElementById("second").value;
+         var y=parseInt(y);
+         var z=(x+y);
+         document.getElementById("heading").innerHTML= "Result=" + z;
+      }
+      function samad(){
+         var a=document.getElementById("first").value;
+         var a=parseInt(a);
+         var b=document.getElementById("second").value;
+         var b=parseInt(b); 
+         var c=(a-b);
+         document.getElementById("heading").innerHTML= "Result=" + c;
+      }
+      function mihi(){
+         var k=document.getElementById("first").value;
+         var k=parseInt(k);
+         var l=document.getElementById("second").value;
+         var l=parseInt(l); 
+         var m=(k*l);
+         document.getElementById("heading").innerHTML= "Result=" + m;
+      }
+         function masum(){
+         var k=document.getElementById("first").value;
+         var k=parseInt(k);
+         var l=document.getElementById("second").value;
+         var l=parseInt(l); 
+         var m=(k/l);
+         
+        document.getElementById("heading").innerHTML= "Result=" + m;
+      }
+
+   </script>
+</body>
+</html>    
